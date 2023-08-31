@@ -9,6 +9,7 @@ export class MessagesService {
   clientToUser = {}
   create(createMessageDto: CreateMessageDto) {
     this.messages.push(createMessageDto); //TODO: improve
+    console.log(this.messages)
     return createMessageDto
   }
 
@@ -18,7 +19,7 @@ export class MessagesService {
 
   identify(name: string, clientId: string) {
     this.clientToUser[clientId] = name
-
+    console.log( this.clientToUser)
     return Object.values(this.clientToUser)
   }
 
